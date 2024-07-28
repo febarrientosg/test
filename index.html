@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Touch Interaction</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Prevent scrolling */
+        user-select: none; /* Prevent text selection */
+        -webkit-user-drag: none; /* Prevent drag events */
+        -webkit-touch-callout: none; /* Disable callout menu */
+        touch-action: none; /* Disable default touch actions */
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Prevent default touch behavior in JavaScript
+      document.addEventListener(
+        "touchstart",
+        function (event) {
+          event.preventDefault();
+        },
+        { passive: false }
+      );
+
+      document.addEventListener(
+        "touchmove",
+        function (event) {
+          event.preventDefault();
+        },
+        { passive: false }
+      );
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
